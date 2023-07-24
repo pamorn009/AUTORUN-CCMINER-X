@@ -18,6 +18,7 @@ chmod +x run-miner
 apt-get install python3 -y
 apt-get install pip -y
 apt-get install wget -y
+apt-get install figlet -y
 apt-get install python3-progress -y
 apt-get install python3-requests -y
 
