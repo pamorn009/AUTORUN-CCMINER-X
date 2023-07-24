@@ -32,7 +32,7 @@ apt-get install git -y
 git clone https://github.com/pichetx/AUTORUN-CCMINER-X
 ```
 ```
-cd autorun-ccminer3.8.0
+cd AUTORUN-CCMINER-X
 ```
 ```
 chmod +x setup.sh && sh setup.sh
