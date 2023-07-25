@@ -123,7 +123,7 @@ def OffMiner():
        if password == "":
             password = "x"
        if cpu == "":
-            cpu = "1"
+            cpu = 1
     except:
             os.system("@cls||clear")
             print("\033[35mเกิดข้อผิดพลาดโปรดตั้งค่าใหม่\033[0m")
