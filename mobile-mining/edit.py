@@ -89,7 +89,7 @@ def OffMiner():
     with open("active.json", "w") as set:
         json.dump(push, set, indent=4)
 
-
+ 
     banner()
     try:
        print("ตัวอย่าง:")
@@ -116,23 +116,19 @@ def OffMiner():
        cpu = int(input("[-t]: "))
        print("\033[35m-----------------------------------------\033[")
         
-        if pool == "" or wallet == "":
+       if pool == "" or wallet == "":
             raise Exception()
-        if name == "":
+       if name == "":
             raise Exception()
-        if password == "":
+       if password == "":
             password = "x"
-        if cpu == "":
+       if cpu == "":
             cpu = 1
-#        if password == "":
-#            password = "x"
-#        if cpu == "":
-#            cpu = 1
     except:
-        os.system("@cls||clear")
-        print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
-        time.sleep(3)
-        os.system("edit-miner")
+            os.system("@cls||clear")
+            print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
+            time.sleep(3)
+            os.system("edit-miner")
 
     push = {
         'status': True,
@@ -182,4 +178,3 @@ while True:
     banner()
     OffMiner()           
     break
-
