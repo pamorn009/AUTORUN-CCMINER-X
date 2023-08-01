@@ -27,6 +27,18 @@ def OffMiner():
 
 
 print("\033[35m-----------------------------------------\033[0m")
+       if pool == "" or wallet == "":
+            raise Exception()
+       if password == "":
+            password = "x" 
+       push = {
+            'status': True,
+            'pool': pool,
+            'wallet': wallet,
+            'pass': password
+        }
+    with open("set-miner/online.json", "w") as set:
+        json.dump(push, set, indent=4)  
        
        print("ชื่อคนงานขุด เช่น \033[93mMiner01\033[00m")
        name = input("[-n]: ")
@@ -36,10 +48,6 @@ print("\033[35m-----------------------------------------\033[0m")
        cpu = int(input("[-t]: "))
        print("\033[35m-----------------------------------------\033[")
         
-       if pool == "" or wallet == "":
-            raise Exception()
-       if password == "":
-            password = "x"
        if name == "":
             raise Exception()
        if cpu == "":
@@ -49,18 +57,7 @@ print("\033[35m-----------------------------------------\033[0m")
             print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
             time.sleep(3)
             os.system("edit-miner")
-    
-    push = {
-         'status': True,
-         'pool': pool,
-         'wallet': wallet,
-         'pass': password
-    }
-    with open("set-miner/online.json", "w") as set:
-        json.dump(push, set, indent=4)
-        
-        
-
+   
         push = {
                  'status': True,
                  'name': name,
