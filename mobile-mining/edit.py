@@ -7,15 +7,7 @@ cpu_thread = cpu_count()
 
 
 def OffMiner():
-
     
-    push = {
-        'status': "off"
-    }
-    with open("active.json", "w") as set:
-        json.dump(push, set, indent=4)
-
- 
     banner()
     try:
        print("ตัวอย่าง:")
@@ -55,24 +47,17 @@ def OffMiner():
             print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
             time.sleep(3)
             os.system("edit-miner")
-
+    
     push = {
          'status': True,
          'pool': pool,
          'wallet': wallet,
-         'pass': password,
+         'pass': password
     }
     with open("set-miner/online.json", "w") as set:
         json.dump(push, set, indent=4)
         
         
-        
-    
-    with open("set-miner/offline.json", encoding="utf-8") as set:
-        load = set.read()
-        loads = json.loads(load)
-        name = loads['name']
-        cpu = loads['cpu']
 
         push = {
                  'status': True,
@@ -82,15 +67,7 @@ def OffMiner():
         with open("set-miner/offline.json", "w") as set:
              json.dump(push, set, indent=4)
              
-        push = {
-             'status': False,
-             'name': "",
-             'cpu': ""
-    }
-        with open("set-miner/online.json", "w") as set:
-            json.dump(push, set, indent=4)
-
-
+    
 while True:
     banner()
     OffMiner()           
