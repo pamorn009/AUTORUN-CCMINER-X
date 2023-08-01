@@ -145,41 +145,7 @@ def OffMiner():
          'cpu': cpu
     }
     with open("set-miner/offline.json", "w") as set:
-        json.dump(push, set, indent=4)    
-        
-
-    try:
-        with open("set-miner/online.json", encoding="utf-8") as set:
-            load = set.read()
-            loads = json.loads(load)
-            minerAPI = loads['miner']
-            nameMiner = loads['name']
-            cpuT = loads['cpu']
-
-        push = {
-        'status': False,
-        'miner': minerAPI,
-        'name': nameMiner,
-        'cpu': cpuT
-        }
-        with open("set-miner/online.json", "w") as set:
-            json.dump(push, set, indent=4)
-    except:
-        push = {
-        'status': False,
-        'miner': "",
-        'name': "",
-        'cpu': ""
-        }
-        with open("set-miner/online.json", "w") as set:
-            json.dump(push, set, indent=4)
-
-
-
-
-
-
-
+        json.dump(push, set, indent=4)
 
 while True:
     banner()
