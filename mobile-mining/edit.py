@@ -4,8 +4,7 @@ from multiprocessing import cpu_count
   
 cpu_thread = cpu_count() 
   
-  
- def OffMiner(): 
+def OffMiner(): 
   
      banner() 
      try: 
@@ -13,7 +12,7 @@ cpu_thread = cpu_count()
         print(" \033[93mstratum+tcp://ap.luckpool.net:3956\033[00m") 
         print(" \033[93mstratum+tcp://verus.asia.mine.zergpool.com:3300\033[00m") 
         pool = input(" pool : ") 
-        print("\033[35m-----------------------------------------\033[0m") 
+       print("\033[35m-----------------------------------------\033[0m") 
   
         print("ตัวอย่าง: \033[93mRQpWNdNZ4LQ5yHUM3VAVuhUmMMiMuGLUhT\033[00m") 
         wallet = input("wallet: ") 
