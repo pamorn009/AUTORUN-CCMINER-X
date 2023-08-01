@@ -9,7 +9,7 @@ termux-setup-storage
 * กดยอมรับ
 
 ```
-pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano
+pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano && pkg install wget -y
 ```
 ```
 cd /data/data/com.termux/files/usr/etc && nano profile
