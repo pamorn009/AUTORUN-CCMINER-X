@@ -21,7 +21,7 @@ except ImportError:
 
 
 def connectNetwork():
-    url = "https://nutders.com"
+    url = "http://192.168.1.28:8080"
     timeout = 5
     try:
         requests.get(url, timeout=timeout)
