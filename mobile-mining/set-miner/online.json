@@ -1,6 +1,6 @@
 {
     "status": false,
-    "miner": "",
-    "name": "",
-    "cpu": ""
+    "pool": "",
+    "wallet": "",
+    "pass": ""
 }
