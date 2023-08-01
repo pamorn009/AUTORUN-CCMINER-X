@@ -5,6 +5,80 @@ from multiprocessing import cpu_count
 
 cpu_thread = cpu_count()
 
+
+def OnMiner():
+
+    # connect server confix
+    push = {
+        'status': ""
+    }
+    with open("active.json", "w") as set:
+        json.dump(push, set, indent=4)
+
+    banner()
+    print("  [ -- SETTING -- ]  ")
+    try:
+        minerAPI = input("TAG: ")
+        if minerAPI == "":
+            raise Exception()
+        nameMiner  = input("NAME: ")
+        if nameMiner == "":
+            nameMiner = "miner01"
+        cpuT = int(input("CPU: "))
+        if cpuT == "":
+            cpuT = cpu_thread-1
+        elif cpuT < 0:
+            raise Exception()
+    except:
+        os.system("@cls||clear")
+        print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
+        time.sleep(3)
+    push = {
+        'status': True,
+        'miner': minerAPI,
+        'name': nameMiner,
+        'cpu': cpuT
+    }
+    with open("set-miner/online.json", "w") as set:
+        json.dump(push, set, indent=4)
+
+
+
+    try:
+        with open("set-miner/offline.json", encoding="utf-8") as set:
+            load = set.read()
+            loads = json.loads(load)
+            pool = loads['pool']
+            wallet = loads['wallet']
+            name = loads['name']
+            password = loads['pass']
+            cpu = loads['cpu']
+        push = {
+            'status': False,
+            'pool': pool,
+            'wallet': wallet,
+            'name': name,
+            'pass': password,
+            'cpu': cpu
+            }
+        with open("set-miner/offline.json", "w") as set:
+            json.dump(push, set, indent=4)
+
+    except:
+        push = {
+            'status': False,
+            'pool': "",
+            'wallet': "",
+            'name': "",
+            'pass': "",
+            'cpu': ""
+        }
+        with open("set-miner/offline.json", "w") as set:
+            json.dump(push, set, indent=4)
+
+
+
+
 def OffMiner():
 
 
@@ -20,27 +94,27 @@ def OffMiner():
     try:
        print("ตัวอย่าง:")
        print(" \033[93mstratum+tcp://ap.luckpool.net:3956\033[00m")
-       print(" \033[93mstratum+tcp://verushash.asia.mine.zergpool.com:3300\033[00m")
+       print(" \033[93mstratum+tcp://verus.asia.mine.zergpool.com:3300\033[00m")
        pool = input(" pool : ")
-       print("\033[35m-----------------------------------------------\033[0m")
+       print("\033[35m-----------------------------------------\033[0m")
         
        print("ตัวอย่าง: \033[93mRQpWNdNZ4LQ5yHUM3VAVuhUmMMiMuGLUhT\033[00m")
        wallet = input("wallet: ")
-       print("\033[35m-----------------------------------------------\033[0m")
+       print("\033[35m-----------------------------------------\033[0m")
         
        print("ชื่อคนงานขุด เช่น \033[93mMiner01\033[00m")
        name = input("[-n]: ")
-       print("\033[35m-----------------------------------------------\033[0m")
+       print("\033[35m-----------------------------------------\033[0m")
         
        print("ตัวอย่าง:")
        print("  \033[93mx หรือ ( hybrid เฉพาะ luckpool )\033[00m")
        print("  \033[93mc=DOGE,mc=VRSC (ไม่ต้องใส่ id=ชื่อ ระบบจะเพิ่มให้เอง)\033[00m")
        password = input("password : ")
-       print("\033[35m-----------------------------------------------\033[0m")
+       print("\033[35m-----------------------------------------\033[0m")
         
        print(f"จำนวนthread \033[93mค่าที่ใส่ได้คือ 0 ถึง {cpu_thread}\033[00m")
        cpu = int(input("[-t]: "))
-       print("\033[35m-----------------------------------------------\033[0m")
+       print("\033[35m-----------------------------------------\033[")
         
        if pool == "" or wallet == "":
             raise Exception()
@@ -52,20 +126,27 @@ def OffMiner():
             cpu = 1
     except:
             os.system("@cls||clear")
-            print("\033[35mเกิดข้อผิดพลาดโปรดตั้งค่าใหม่\033[0m")
+            print("เกิดข้อผิดพลาดโปรดตั้งค่าใหม่!")
             time.sleep(3)
             os.system("edit-miner")
 
     push = {
-        'status': True,
-        'pool': pool,
-        'wallet': wallet,
-        'name': name,
-        'pass': password,
-        'cpu': cpu
+         'status': True,
+         'pool': pool,
+         'wallet': wallet,
+         'pass': password,
+    }
+    with open("set-miner/online.json", "w") as set:
+        json.dump(push, set, indent=4)
+
+    push = {
+         'status': True,
+         'name': name,
+         'cpu': cpu
     }
     with open("set-miner/offline.json", "w") as set:
-        json.dump(push, set, indent=4)
+        json.dump(push, set, indent=4)    
+        
 
     try:
         with open("set-miner/online.json", encoding="utf-8") as set:
@@ -104,3 +185,4 @@ while True:
     banner()
     OffMiner()           
     break
+
