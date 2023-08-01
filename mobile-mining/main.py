@@ -45,7 +45,6 @@ def runOffline():
         if cpu == "":
            cpu = "1"
 
-        return
         print("\033[1;34;40m")   
         print("WALLET =",wallet)
         print("NAME   =",name)
