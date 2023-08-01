@@ -50,57 +50,18 @@ def runOnline():
         with open("set-miner/online.json", encoding="utf-8") as set:
             load = set.read()
             loads = json.loads(load)
-            miner = loads['miner']
-            nameMiner = loads['name']
-            cpu = loads['cpu']
+            pool = loads['pool']
+            wallet = loads['wallet']
+            password = loads['pass']
     
-        try:
-            url = f"https://nutders.com/api/v1/get-read-specific.php?tag_name={miner}"
-            receive = requests.get(url)
-            s = receive.json()
-
-            print("\033[1;34;40m")   
-            print("TAG    =  ",s['tag_name'])
-            print("WALLET =  ",s['wallet']+"."+nameMiner)
-            print("POOL   =  ",s['pool'])
-            print("CPU    =  ",cpu)
-
-
-            if s["pool"] in zergpool:
-
-                print("PASS   =  ",s['password']+",ID="+nameMiner)
-                print("\033[00m\n")
-
-                time.sleep(2)
-                os.system(f"cd ccminer && ./ccminer -a verus -o {s['pool']} -u {s['wallet']}.{nameMiner} -p {s['password']},ID={nameMiner} -t {cpu}")
-            else:
-
-                print("PASS   =  ",s['password'])
-                print("\033[00m\n")
-
-                time.sleep(2)
-                os.system(f"cd ccminer && ./ccminer -a verus -o {s['pool']} -u {s['wallet']}.{nameMiner} -p {s['password']} -t {cpu}")
-        except:
-            # push = {'status': False,'miner': '','name': '','cpu': 1}
-            # with open("set-miner/online.json", "w") as set:
-            #     json.dump(push, set, indent=4)
-            os.system("@cls||clear")
-            print("\n\n\033[1;31;40mไม่พบการตั้งค่านี้บนเว็บ กรุณาตั้งค่าที่ nutders.com \nและตั่งค่าบนมือถือใหม่ด้วยคำสั่ง edit-miner\033[0m\n\n")
-
-    else:
-        os.system("@cls||clear")
-        print("\n\n\033[1;31;40mไม่พบการเชื่อมต่ออินเตอร์เน็ต!\033[0m\n\n")
-
-
-    # print(s['id'])
-    # print(s['tag_name'])
-    # print(s['pool'])
-    # print(s['wallet'])
-    # print(s['password'])
-
-
-
-
+        push = {
+        'status': True,
+        'pool': pool,
+        'wallet': wallet,
+        'pass': password
+    }
+    with open("set-miner/online.json", "w") as set:
+        json.dump(push, set, indent=4)
 
 def runOffline():
     banner()
