@@ -1,9 +1,8 @@
 import os, time, json 
- from config import banner 
- from multiprocessing import cpu_count 
+from config import banner 
+from multiprocessing import cpu_count 
   
-  
- cpu_thread = cpu_count() 
+cpu_thread = cpu_count() 
   
   
  def OffMiner(): 
