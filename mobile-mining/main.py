@@ -88,8 +88,7 @@ while True:
         for i in range(100):
             time.sleep(0.05)
             bar.next()
-
-        break
+            
         runOffline()
         break
 else:
