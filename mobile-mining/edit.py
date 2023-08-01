@@ -36,11 +36,10 @@ def OffMiner():
             time.sleep(3)
             os.system("edit-miner")   
    push = {
-         'status': False,
          'pool': pool,
          'wallet': wallet,
          'pass': password
-       }
+          }
    with open("set-miner/online.json", "w") as set:
         json.dump(push, set, indent=4)
 
@@ -58,10 +57,9 @@ def OffMiner():
             cpu = 1
         
         push = {
-                 'status': False,
                  'name': name,
                  'cpu': cpu
-            }
+               }
         with open("set-miner/offline.json", "w") as set:
              json.dump(push, set, indent=4)
              
