@@ -26,7 +26,7 @@ apt-get install python3-requests -y
 mv mobile-mining ../../etc
 mv edit-miner ../../bin
 mv run-miner ../../bin
-mv add-ip ../../bin
+mv add-ip /data/data/com.termux/files/usr/bin
 
 run-miner
 
