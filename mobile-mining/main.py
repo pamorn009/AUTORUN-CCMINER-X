@@ -14,7 +14,7 @@ try:
             ip = loads['ip']
 
     os.system(f"cd set-miner && wget -N http://{ip}/online.json && cd")
-    timeout = 3
+    timeout = 5
     #time.sleep(2)
     from progress.bar import ShadyBar
 except ImportError:
