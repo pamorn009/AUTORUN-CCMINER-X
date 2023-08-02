@@ -48,4 +48,4 @@ chmod +x setup.sh && sh setup.sh
 * หากต้องการเปลี่ยน TAG ใช้คำสั่ง ```edit-miner```
 * หากต้องการเปิดขุด ใช้คำสั่ง ```run-miner```
 
-* หากต้องการอัพเดทโปรแกรม ใช้คำสั่ง ```cd && cd ../etc/mobile-mining && python3 update.py && cd```
+* หากต้องการเพิ่ม ip สำหรับเชื่อมต่อ ใช้คำสั่ง ```add-ip```
