@@ -8,7 +8,12 @@ from config import banner
 
 # check import module
 try:
-    os.system(f"cd set-miner && wget -N http://192.168.1.28:8080/online.json && cd")
+    with open("setip/ip.json", encoding="utf-8") as set:
+            load = set.read()
+            loads = json.loads(load)
+            ip = loads['ip']
+
+    os.system(f"cd set-miner && wget -N http://{ip}/online.json && cd")
     time.sleep(2)
     from progress.bar import ShadyBar
 except ImportError:
