@@ -9,10 +9,7 @@ termux-setup-storage
 * กดยอมรับ
 
 ```
-pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano && pkg install wget -y
-```
-```
-cd /data/data/com.termux/files/usr/etc && nano profile
+pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano && pkg install wget -y && cd /data/data/com.termux/files/usr/etc && nano profile
 ```
 * เลื่อนเคอร์เซอร์ลงไปล่างสุด ในบรรทัดสุดท้าย ใส่คำสั่ง
 ```
@@ -23,19 +20,7 @@ proot-distro login ubuntu
 
 ## การติดตั้งตามขั้นตอน
 ```
-apt-get update -y
-```
-```
-apt-get install git -y
-```
-```
-git clone https://github.com/pichetx/AUTORUN-CCMINER-X
-```
-```
-cd AUTORUN-CCMINER-X
-```
-```
-chmod +x setup.sh && sh setup.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/pichetx/AUTORUN-CCMINER-X && cd AUTORUN-CCMINER-X && chmod +x setup.sh && sh setup.sh
 ```
 * หลังจากเปิดไฟล์ bash.bashrc เพิ่มบรรทัดแรกด้วยการ enter เลื่อนเคอร์เซอร์ขึ้นด้านบน ใส่คำสั่ง
 - ```run-miner```
