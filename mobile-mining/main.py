@@ -51,7 +51,12 @@ def runOffline():
            name = "noname"
         if cpu == "":
            cpu = "1"
+        with open("setip/ip.json", encoding="utf-8") as set:
+            load = set.read()
+            loads = json.loads(load)
+            ip = loads['ip']
 
+        print("\033[93mCONNECT NETWORK\033[00m\n  http://",ip)
         print("\033[1;34;40m")   
         print("WALLET =",wallet)
         print("NAME   =",name)
