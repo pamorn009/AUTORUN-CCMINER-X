@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd
-rm -rf autorun-ccminer3.8.0
+ #cd
+ #rm -rf autorun-ccminer3.8.0
 cd ../etc/mobile-mining/set-miner
 cp -r offline.json online.json /../
 
