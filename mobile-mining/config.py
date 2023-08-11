@@ -11,3 +11,10 @@ def banner():
     print("\033[36m\033[0m")
     
     print(f"\n\033[96mกำลัง Run Mining\033[0m\n")
+
+def bannerup():
+    os.system("clear")
+    print("\033[1;34;34m")
+    os.system("figlet -f big UPDATE")
+    print("\033[00m\n")
+    print(f"\n\033[96mกำลัง UPDATE Miner\033[0m\n")
