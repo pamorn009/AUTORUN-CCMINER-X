@@ -14,6 +14,7 @@ apt-get install nano -y
 chmod +x edit-miner
 chmod +x run-miner
 chmod +x add-ip
+chmod +x update
 
 apt-get install python3 -y
 apt-get install pip -y
@@ -27,6 +28,7 @@ mv mobile-mining ../../etc
 mv edit-miner ../../bin
 mv run-miner ../../bin
 mv add-ip ../../bin
+mv update ../../bin
 
 run-miner
 
