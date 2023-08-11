@@ -6,12 +6,12 @@ from config import bannerup
 try:
     os.system("@cls||clear")
     bannerup()
-    os.system(f"rm -rf AUTORUN-CCMINER-X && cd ../etc/mobile-mining/set-miner && cp -r offline.json online.json /../ && cd ../etc && rm -rf mobile-mining")
-    os.system(f"cd ../bin && rm -f edit-miner run-miner add-ip")
-    os.system(f"git clone https://github.com/pichetx/AUTORUN-CCMINER-X")
-    os.system(f"cd AUTORUN-CCMINER-X/mobile-mining/set-miner && rm -r offline.json online.json")
-    os.system(f"mv offline.json online.json /AUTORUN-CCMINER-X/mobile-mining/set-miner")
-    os.system(f"cd AUTORUN-CCMINER-X && chmod +x setupate.sh && sh setupdate.sh")
+    os.system(f"cd && rm -rf AUTORUN-CCMINER-X && cd ../etc/mobile-mining/set-miner && cp -r offline.json online.json /../ && cd ../etc && rm -rf mobile-mining")
+    os.system(f"cd && cd ../bin && rm -f edit-miner run-miner add-ip")
+    os.system(f"cd && git clone https://github.com/pichetx/AUTORUN-CCMINER-X")
+    os.system(f"cd set-miner && rm -r offline.json online.json")
+    os.system(f"cd && mv offline.json online.json /AUTORUN-CCMINER-X/mobile-mining/set-miner")
+    os.system(f"cd && cd AUTORUN-CCMINER-X && chmod +x setupate.sh && sh setupdate.sh")
     
     time.sleep(2)
 except:
