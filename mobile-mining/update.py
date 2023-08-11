@@ -13,7 +13,7 @@ try:
     os.system(f"cd && git clone https://github.com/pichetx/AUTORUN-CCMINER-X")
     os.system(f"cd && cd AUTORUN-CCMINER-X/mobile-mining/set-miner && rm -r offline.json online.json")
     os.system(f"cd && mv offline.json online.json /AUTORUN-CCMINER-X/mobile-mining/set-miner")
-    os.system(f"cd && cd AUTORUN-CCMINER-X && chmod +x setupate.sh && sh setupdate.sh")
+    os.system(f"cd && cd AUTORUN-CCMINER-X && chmod +x setupdate.sh && sh setupdate.sh")
     
     time.sleep(2)
 except:
