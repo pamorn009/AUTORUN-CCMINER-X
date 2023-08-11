@@ -1,45 +1,5 @@
 #!/bin/bash
 
- #cd
- #rm -rf autorun-ccminer3.8.0
-cd ../etc/mobile-mining/set-miner
-cp -r offline.json online.json /../
-
-cd ../etc
-rm -rf mobile-mining
 cd
-cd ../bin
-rm -f edit-miner run-miner add-ip
-cd
-git clone https://github.com/pichetx/AUTORUN-CCMINER-X
-cd AUTORUN-CCMINER-X
-apt-get update -y
-apt-get upgrade -y
-
-chmod +x edit-miner
-chmod +x run-miner
-chmod +x add-ip
-chmod +x update
-
-mv mobile-mining ../../etc
-mv edit-miner ../../bin
-mv run-miner ../../bin
-mv add-ip ../../bin
-mv update ../../bin
-cd
-cd ../
-mv offline.json ../etc/mobile-mining/set-miner
-mv online.json ../etc/mobile-mining/set-miner
-
-run-miner
-
-
-cd && cd ../etc/mobile-mining/ccminer
-chmod +x build.sh
-chmod +x configure.sh
-chmod +x autogen.sh
-./build.sh
-
-chmod +x ccminer
-
-run-miner
+cd ../etc/mobile-mining
+python3 update.py
