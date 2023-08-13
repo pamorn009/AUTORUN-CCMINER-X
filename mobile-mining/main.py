@@ -64,7 +64,7 @@ def runOffline():
         print("CPU    =",cpu)
         if pool in zergpool:
 
-           print("PASS   = ",password +",id="+name)
+           print("PASS   =",password +",id="+name)
            print("\033[00m\n")
 
            time.sleep(2)
