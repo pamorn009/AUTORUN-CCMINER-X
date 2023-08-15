@@ -5,7 +5,7 @@ def banner():
     os.system("clear")
     print("\033[1;34;40m")
     os.system("figlet -f big VERUS")
-	os.system("figlet -f digital server version 1.1")
+    os.system("figlet -f digital server version 1.1")
     print("\033[00m\n")
     print("\033[35mEdit by PICHET SAENGTEWAN\033[0m")
     print("\033[35mDebug Colors by AMARIN PRAPRIWIT\033[0m")
