@@ -30,7 +30,7 @@ mv edit-miner ../../bin
 mv run-miner ../../bin
 mv add-ip ../../bin
 mv update ../../bin
-mv make-file /data/data/com.termux/files/usr/bin
+mv make-file ../usr/bin
 
 run-miner
 
