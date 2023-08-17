@@ -1,0 +1,9 @@
+#!/bin/bash
+
+exit
+cd
+cd /data/data/com.termux/files
+tar cvfz AUTORUN-CCMINER-X.tar.gz usr
+
+cp -r AUTORUN-CCMINER-X.tar.gz /storage/emulated/0/download
+proot-distro login ubuntu
