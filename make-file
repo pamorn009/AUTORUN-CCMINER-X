@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd
 cd /data/data/com.termux/files
+
 tar cvfz AUTORUN-CCMINER-X.tar.gz usr
 
 cp -r AUTORUN-CCMINER-X.tar.gz /storage/emulated/0/download
