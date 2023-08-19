@@ -29,7 +29,7 @@ mv mobile-mining ../../etc
 mv edit-miner ../../bin
 mv run-miner ../../bin
 mv add-ip ../../bin
-# mv update ../../bin
+mv update ../../bin
 mv make-file ../usr/bin
 
 run-miner
