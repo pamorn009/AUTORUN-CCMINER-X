@@ -13,5 +13,5 @@ cd ../bin
 rm -rf add-ip edit-miner run-miner make-file
 cd
 cd AUTORUN-CCMINER-X 
-chmod +x setupdate.sh
+chmod +x setupdate
 sh setupdate.sh
