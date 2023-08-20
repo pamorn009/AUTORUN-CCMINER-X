@@ -23,6 +23,6 @@ def bannerup():
 def banneredit():
     os.system("clear")
     print("\033[1;34;36m")
-    os.system("figlet [EDIT-miner]")
+    os.system("figlet -f big [-EDIT-]")
     print("\033[00m\n")
     print(f"\n\033[94mEdit by PICHET SAENGTEWAN\033[0m\n")
