@@ -1,5 +1,5 @@
 import os, time, json
-from config import banner
+from config import banneredit
 from multiprocessing import cpu_count
 
 
@@ -64,6 +64,6 @@ def OffMiner():
              json.dump(push, set, indent=4)
              
 while True:
-  banner()
+  banneredit()
   OffMiner()
   break
