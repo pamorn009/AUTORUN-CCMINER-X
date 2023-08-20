@@ -25,7 +25,7 @@ apt-get install python3-progress -y
 apt-get install python3-requests -y
 
 
-mv mobile-mining ../../etc
+mv mobile-mining ../../et
 mv edit-miner ../../bin
 mv run-miner ../../bin
 mv add-ip ../../bin
