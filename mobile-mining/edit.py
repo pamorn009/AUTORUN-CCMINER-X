@@ -8,7 +8,7 @@ cpu_thread = cpu_count()
 
 def OffMiner():
   
-   banner()
+   banneredit()
    try:
        print("ตัวอย่าง:")
        print(" \033[93mstratum+tcp://ap.luckpool.net:3956\033[00m")
