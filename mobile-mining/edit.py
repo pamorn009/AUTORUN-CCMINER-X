@@ -66,4 +66,5 @@ def OffMiner():
 while True:
   banneredit()
   OffMiner()
+  os.system("run-miner")     
   break
