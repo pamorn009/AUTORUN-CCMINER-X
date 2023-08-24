@@ -3,7 +3,7 @@ import json
 import time
 import pip
 from config import banner
-from update import updatedata
+from update import job
 
 
 
