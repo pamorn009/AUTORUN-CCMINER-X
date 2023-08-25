@@ -9,6 +9,10 @@ termux-setup-storage
 * กดยอมรับ
 
 ```
+pkg update -y
+```
+พิมพ์ N ในทุกการเรียกถาม
+```
 pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano && pkg install wget -y && cd /data/data/com.termux/files/usr/etc && nano profile
 ```
 * เลื่อนเคอร์เซอร์ลงไปล่างสุด ในบรรทัดสุดท้าย ใส่คำสั่ง
