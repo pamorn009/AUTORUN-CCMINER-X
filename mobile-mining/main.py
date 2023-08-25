@@ -4,7 +4,7 @@ import time
 import pip
 import schedule
 from config import banner
-from config import bannerup
+from update import job
 
 
 # check import module
