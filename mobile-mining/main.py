@@ -95,6 +95,7 @@ def runOffline():
 
 
 while True:
+    job()    
     os.system("@cls||clear")
     with ShadyBar("\033[32m Start Mining\033[00m") as bar:
         for i in range(100):
