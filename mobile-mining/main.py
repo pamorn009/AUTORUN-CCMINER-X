@@ -3,7 +3,6 @@ import json
 import time
 import pip
 from config import banner
-from update import job
 
 
 # check import module
@@ -93,8 +92,7 @@ def runOffline():
 
 
 
-while True:
-    job()    
+while True:   
     os.system("@cls||clear")
     with ShadyBar("\033[32m Start Mining\033[00m") as bar:
         for i in range(100):
