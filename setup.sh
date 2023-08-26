@@ -9,6 +9,7 @@ apt-get install automake -y
 apt-get install autotools-dev -y  
 apt-get install build-essential -y
 apt-get install nano -y
+pip2 install schedule
 
 
 chmod +x edit-miner
