@@ -2,7 +2,6 @@ import os
 import json
 import time
 import pip
-import schedule
 from config import banner
 from update import job
 
