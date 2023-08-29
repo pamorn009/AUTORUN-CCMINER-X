@@ -38,3 +38,4 @@ apt-get update -y && apt-get install git -y && git clone https://github.com/pich
 * หากต้องการเปิดขุด ใช้คำสั่ง ```run-miner```
 
 * หากต้องการเพิ่ม ip สำหรับเชื่อมต่อ ใช้คำสั่ง ```add-ip```
+# AUTORUN-CCMINER-X1.2
