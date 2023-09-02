@@ -16,7 +16,7 @@ chmod +x edit-miner
 chmod +x run-miner
 chmod +x add-ip
 chmod +x update
-chmod +x make-file
+chmod +x up-grade
 
 apt-get install python3 -y
 apt-get install pip -y
@@ -31,7 +31,7 @@ mv edit-miner ../../bin
 mv run-miner ../../bin
 mv add-ip ../../bin
 mv update ../../bin
-mv make-file ../usr/bin
+mv up-grade ../../bin
 
 run-miner
 
