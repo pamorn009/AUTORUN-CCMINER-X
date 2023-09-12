@@ -24,7 +24,7 @@ proot-distro login ubuntu
 
 ## การติดตั้งตามขั้นตอน
 ```
-apt-get update -y && apt-get install git -y && git clone https://github.com/pichetx/AUTORUN-CCMINER-X && cd AUTORUN-CCMINER-X && chmod +x setup.sh && sh setup.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/pichetx/AUTORUN-CCMINER-X1.2 && cd AUTORUN-CCMINER-X1.2 && chmod +x setup.sh && sh setup.sh
 ```
 * หลังจากเปิดไฟล์ bash.bashrc เพิ่มบรรทัดแรกด้วยการ enter เลื่อนเคอร์เซอร์ขึ้นด้านบน ใส่คำสั่ง
 - ```run-miner```
@@ -38,4 +38,4 @@ apt-get update -y && apt-get install git -y && git clone https://github.com/pich
 * หากต้องการเปิดขุด ใช้คำสั่ง ```run-miner```
 
 * หากต้องการเพิ่ม ip สำหรับเชื่อมต่อ ใช้คำสั่ง ```add-ip```
-# AUTORUN-CCMINER-X1.2
+# AUTORUN-CCMINER-X
